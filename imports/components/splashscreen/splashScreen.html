@@ -1,14 +1,16 @@
-<div ui-view=""></div>
-<header>
-  <h1>Welcome to Jax In a Box Games!</h1>
-  <login-buttons></login-buttons>
-</header>
-<br>
-<img src="/images/jaxboxbouncingbox.gif" alt="Things in a Box Online!" style="margin: 0 auto;display: block;" width="256" height="406">
+<div ui-view="">
+  <header>
+    <h1>Welcome to Jax In a Box Games!</h1>
+  </header>
+  <br>
+  <login-buttons align="center"></login-buttons>
+  <br>
+  <img src="/images/jaxboxbouncingbox.gif" alt="Things in a Box Online!" style="margin: 0 auto;display: block;" width="256" height="406">
 
-<ul>
-  <li>
-    <button class="enterServerList" ng-click="enterServerList()" ng-show="$ctrl.currentUser" style="margin:0 auto;display:block;"> JOIN GAME </button>
-    <h3 ng-show="!$ctrl.currentUser" align="center">Sign in to join games!</h3>
-  </li>
-</ul>
+  <ul>
+    <li>
+      <button class="enterServerList" ng-click="enterServerList()" ng-show="$ctrl.currentUser" style="margin:0 auto;display:block;"> JOIN GAME </button>
+      <h3 ng-show="!$ctrl.currentUser" align="center">Sign in to join games!</h3>
+    </li>
+  </ul>
+</div>
