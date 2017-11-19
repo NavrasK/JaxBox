@@ -7,3 +7,12 @@
     <div class="inner"><button class="newServer" ng-click="newServer()">CREATE SERVER</button></div>
   </div>
 </header>
+
+<ul>
+  <li ng-repeat="server in $ctrl.servers">
+    <button class="delete" ng-click="$ctrl.removeserver(server)">&times;</button>
+    <span class="text">
+      <strong>{{server.name}}</strong> - Max {{server.MaxPlayers}} Players
+    </span>
+  </li>
+</ul>
