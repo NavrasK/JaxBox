@@ -11,6 +11,7 @@ angular.module('jax-games', [
   angularMeteor,
   splashScreen.name,
   serverBrowser.name,
+  createServer.name,
   uiRouter,
   'accounts.ui'
 ]);

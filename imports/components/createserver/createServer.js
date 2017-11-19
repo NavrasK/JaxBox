@@ -7,6 +7,7 @@ import { name as serverBrowser } from '../serverbrowser/serverBrowser';
 
 class CreateServerCtrl {
   constructor($scope) {
+    console.log("created!");
     $scope.viewModel(this);
     this.helpers({
       currentUser() {
@@ -27,10 +28,12 @@ export default angular.module('createServer', [
   templateUrl: 'imports/components/createserver/createServer.html',
   controller: ['$scope', CreateServerCtrl]
 })
-
 .config(config);
-function config($locationProvider, $urlRouterProvider){
+function config($stateProvider){
   'ngInject';
-  $locationProvider.html5Mode(true);
-  $urlRouterProvider.otherwise('/create');
+  $stateProvider
+    .state('create', {
+      url: '/create',
+      template: '<create-server></create-server>'
+    })
 }

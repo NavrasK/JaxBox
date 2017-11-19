@@ -3,6 +3,7 @@ import angularMeteor from 'angular-meteor';
 import { Meteor } from 'meteor/meteor';
 import template from './splashScreen.html';
 import uiRouter from 'angular-ui-router';
+//import { Players } from '../../api/users.js';
 import { name as serverBrowser } from '../serverbrowser/serverBrowser';
 import { name as createServer } from '../createserver/createServer';
 import { name as joinServer } from '../joinserver/joinServer';
