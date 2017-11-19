@@ -4,8 +4,8 @@ import { Meteor } from 'meteor/meteor';
 import template from './serverBrowser.html';
 import uiRouter from 'angular-ui-router';
 import { name as splashScreen } from '../splashscreen/splashScreen';
-//import { name as joinServer } from '/joinServer';
-//import { name as createServer } from '/createServer';
+import { name as joinServer } from '../joinserver/joinServer';
+import { name as createServer } from '../createserver/createServer';
 
 class ServerBrowerCtrl {
   constructor($scope) {
@@ -19,7 +19,7 @@ class ServerBrowerCtrl {
       window.location = "/splash";
     }
     $scope.newServer = function(){
-      //window.location = "/join";
+      window.location = "/create";
     }
   }
 }

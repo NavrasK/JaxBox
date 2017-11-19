@@ -1,13 +1,11 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import { Meteor } from 'meteor/meteor';
-import template from './splashScreen.html';
+import template from './createServer.html';
 import uiRouter from 'angular-ui-router';
 import { name as serverBrowser } from '../serverbrowser/serverBrowser';
-import { name as createServer } from '../createserver/createServer';
-import { name as joinServer } from '../joinserver/joinServer';
 
-class SplashScreenCtrl {
+class CreateServerCtrl {
   constructor($scope) {
     $scope.viewModel(this);
     this.helpers({
@@ -15,24 +13,24 @@ class SplashScreenCtrl {
         return Meteor.user();
       }
     });
-    $scope.enterServerList = function(){
+    $scope.backToServers = function(){
       window.location = "/servers";
     }
   }
 }
 
-export default angular.module('splashScreen', [
+export default angular.module('createServer', [
   angularMeteor,
   uiRouter
 ])
-  .component('splashScreen', {
-  templateUrl: 'imports/components/splashscreen/splashScreen.html',
-  controller: ['$scope', SplashScreenCtrl]
+  .component('createServer', {
+  templateUrl: 'imports/components/createserver/createServer.html',
+  controller: ['$scope', CreateServerCtrl]
 })
 
 .config(config);
 function config($locationProvider, $urlRouterProvider){
   'ngInject';
   $locationProvider.html5Mode(true);
-  $urlRouterProvider.otherwise('/splash');
+  $urlRouterProvider.otherwise('/create');
 }
