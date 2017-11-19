@@ -6,13 +6,20 @@ import uiRouter from 'angular-ui-router';
 import { name as splashScreen } from '../splashscreen/splashScreen';
 import { name as joinServer } from '../joinserver/joinServer';
 import { name as createServer } from '../createserver/createServer';
+import { serverlist } from '../../api/servers';
 
 class ServerBrowerCtrl {
   constructor($scope) {
     $scope.viewModel(this);
+    this.subscribe('servers');
     this.helpers({
       currentUser() {
         return Meteor.user();
+      },
+      servers(){
+        const selector = {};
+        console.log(this);
+        return serverlist.find(selector, {});
       }
     });
     $scope.toSplash = function(){
