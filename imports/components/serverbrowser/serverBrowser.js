@@ -28,6 +28,12 @@ class ServerBrowerCtrl {
     $scope.newServer = function(){
       window.location = "/create";
     }
+    $scope.removeServer = function(server){
+      Meteor.call('servers.remove', server._id);
+    }
+    $scope.joinServer = function(server){
+      window.location = "/join";
+    }
   }
 }
 

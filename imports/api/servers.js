@@ -27,15 +27,15 @@ Meteor.methods({
       Password: pwd,
     });
   },
-  'servers.remove' (taskId) {
-    check(taskId, String);
+  'servers.remove' (serverId) {
+    check(serverId, String);
 
-    const task = serverlist.findOne(taskId);
-    if (task.owner !== Meteor.userId()) {
+    const task = serverlist.findOne(serverId);
+    //if (task.owner !== Meteor.userId()) {
       // If the task is private, make sure only the owner can delete it
-      throw new Meteor.Error('not-authorized');
-    }
+    //  throw new Meteor.Error('not-authorized');
+    //}
 
-    serverlist.remove(taskId);
+    serverlist.remove(serverId);
   },
 });
