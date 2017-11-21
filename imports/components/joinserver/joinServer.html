@@ -1,0 +1,19 @@
+<header>
+  <h1>Jax Box Games!</h1>
+
+  <div id="outer" align = "center">
+    <div class="inner"><button class="back" ng-click="backToServers()">BACK TO SERVERS</button></div>
+    <div class="inner" style="padding-left:3em;padding-right:3em;"><h3>JOIN SERVER</h3></div>
+    <div class="inner"><button class="newServer" ng-click="newServer()">START SERVER</button></div>
+  </div>
+</header>
+
+<ul>
+  <li style="margin:0 auto;display: block;">
+    <h2>Joining {{server.Name}}</h2>
+    <br>
+    <form>
+      <input ng-model="pwd" type="text" name="text" placeholder="PASSWORD" size="30"/>
+    </form>
+  </li>
+</ul>

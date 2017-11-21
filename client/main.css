@@ -45,6 +45,8 @@ header {
 
 #login-buttons {
     display: block;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 h1 {
@@ -88,6 +90,22 @@ ul {
     font-size: 1em;
     border: none;
     position: relative;
+}
+
+.headButton {
+  font-weight: bold;
+  background: #bccacd;
+  font-size: 1em;
+  border: none;
+  position: relative;
+}
+
+.genButton {
+  font-weight: bold;
+  background: #dddddd;
+  font-size: 1em;
+  border: none;
+  position: relative;
 }
 
 .join {
