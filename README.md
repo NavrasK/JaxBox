@@ -6,4 +6,6 @@ The current objective is to be able to emulate the board game "Things in a Box" 
 
 It is being designed with Meteor and AngularJS.
 
+To run type meteor when in command line in this directory, and to start the mobile testing run lt --port 3000 --s jaxboxgames --o
+
 Created by Navras Kamal for HackED Beta 2017

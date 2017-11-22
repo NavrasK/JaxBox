@@ -24,17 +24,19 @@ Meteor.methods({
     serverlist.insert({
       Name: name,
       MaxPlayers: maxp,
+      owner: Meteor.userId(),
+      username: Meteor.user().username,
       Password: pwd,
     });
   },
   'servers.remove' (serverId) {
     check(serverId, String);
 
-    const task = serverlist.findOne(serverId);
-    //if (task.owner !== Meteor.userId()) {
+    const server = serverlist.findOne(serverId);
+    if (server.owner !== Meteor.userId()) {
       // If the task is private, make sure only the owner can delete it
-    //  throw new Meteor.Error('not-authorized');
-    //}
+      throw new Meteor.Error('not-authorized');
+    }
 
     serverlist.remove(serverId);
   },

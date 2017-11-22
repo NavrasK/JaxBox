@@ -21,7 +21,6 @@ class CreateServerCtrl {
       window.location = "/servers";
     }
     $scope.newServer = function(){
-      //console.log($scope.serverName, $scope.maxPlayers, $scope.pwd);
       Meteor.call('servers.insert', $scope.serverName, $scope.maxPlayers, $scope.pwd);
       window.location = "/servers";
     }
