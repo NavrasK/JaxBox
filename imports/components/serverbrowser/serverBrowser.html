@@ -11,9 +11,15 @@
 <ul>
   <li ng-repeat="server in $ctrl.servers">
     <button class="delete" ng-click="removeServer(server)" ng-show="server.owner === $ctrl.currentUser._id">&times;</button>
-    <button class="join" ng-click="joinServer(server)">JOIN</button>
-    <span class="text">
-      <strong>{{server.Name}}</strong> - Created by: {{server.username}}, Max {{server.MaxPlayers}} Players
+    <!-- <button class="join" ng-click="joinServer(server)">JOIN</button> -->
+    <uib-accordion close-others="oneAtATime">
+      <span class="text">
+        <strong>{{server.Name}}</strong> - Created by: {{server.username}}, Max {{server.MaxPlayers}} Players
+        <div uib-accordion-group class="panel-default" heading="JOIN">
+          <p>Please, to delete your account, click the button below</p>
+          <button class="btn btn-danger">Delete</button>
+        </div>
+      </uib-accordion>
     </span>
   </li>
 </ul>
